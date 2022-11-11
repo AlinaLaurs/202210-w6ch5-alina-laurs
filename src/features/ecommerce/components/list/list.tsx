@@ -1,5 +1,5 @@
 import { AnyAction, Dispatch } from 'redux';
-import { CharacterType } from '../../models/character';
+import { CharacterType } from '../../models/jackets';
 import { ListItem } from '../list.item/list.item';
 
 export function List({

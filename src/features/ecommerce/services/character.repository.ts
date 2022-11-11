@@ -1,4 +1,4 @@
-import { CharacterType } from '../models/character';
+import { CharacterType } from '../models/jackets';
 import { Repository } from './repository';
 
 export class CharacterTypeRepository implements Repository<CharacterType> {

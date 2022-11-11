@@ -1,5 +1,5 @@
 import { configureStore } from '@reduxjs/toolkit';
-import { CharacterReducer } from '../../features/got/reducer/reducer';
+import { CharacterReducer } from '../../features/ecommerce/reducer/reducer';
 
 export const appStore = configureStore({
     reducer: {

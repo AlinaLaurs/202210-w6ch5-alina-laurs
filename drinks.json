@@ -1,0 +1,114 @@
+{
+    "jackets": [
+        {
+            "id": 1,
+            "image": "https://www.allsaints.com/dw/image/v2/BHHD_PRD/on/demandware.static/-/Sites-allsaints-emea-master-catalog/default/dw044ea615/images/large/WL250T/103/WL250T-103-1.jpg?sw=1600&sh=2000&sm=fit&q=70https://www.allsaints.com/dw/image/v2/BHHD_PRD/on/demandware.static/-/Sites-allsaints-emea-master-catalog/default/dw044ea615/images/large/WL250T/103/WL250T-103-1.jpg?sw=1600&sh=2000&sm=fit&q=70",
+            "name": "Dalby Suede Biker Jacket",
+            "brand": "AllSaints",
+            "color": "Light Grey",
+            "price": "429",
+            "onSale": false
+        },
+        {
+            "id": 2,
+            "image": "https://www.allsaints.com/dw/image/v2/BHHD_PRD/on/demandware.static/-/Sites-allsaints-emea-master-catalog/default/dw16932954/images/large/WL004N/5/WL004N-5-1.jpg?sw=1600&sh=2000&sm=fit&q=70",
+            "name": "Dalby Leather Biker Jacket",
+            "brand": "AllSaints",
+            "color": "Black",
+            "price": "399",
+            "onSale": false
+        },
+        {
+            "id": 3,
+            "image": "https://www.allsaints.com/dw/image/v2/BHHD_PRD/on/demandware.static/-/Sites-allsaints-emea-master-catalog/default/dweabe932e/images/large/WL111X/4193/WL111X-4193-1.jpg?sw=1600&sh=2000&sm=fit&q=70",
+            "name": "Serra Shearling Taped Coat",
+            "brand": "AllSaints",
+            "color": "Ecru White",
+            "price": "1.349",
+            "onSale": false
+        },
+        {
+            "id": 4,
+            "image": "https://www.allsaints.com/dw/image/v2/BHHD_PRD/on/demandware.static/-/Sites-allsaints-emea-master-catalog/default/dw07831a02/images/large/WL167X/5/WL167X-5-1.jpg?sw=1600&sh=2000&sm=fit&q=70",
+            "name": "Gidley Leather Biker Jacket",
+            "brand": "AllSaints",
+            "color": "Black",
+            "price": "479",
+            "onSale": false
+        },
+        {
+            "id": 5,
+            "image": "https://www.allsaints.com/dw/image/v2/BHHD_PRD/on/demandware.static/-/Sites-allsaints-emea-master-catalog/default/dw8c88844e/images/large/WL047C/140/WL047C-140-1.jpg?sw=1600&sh=2000&sm=fit&q=70",
+            "name": "Cargo Leather Biker Jacket",
+            "brand": "AllSaints",
+            "color": "Black/Grey",
+            "price": "399",
+            "onSale": false
+        },
+        {
+            "id": 6,
+            "image": "https://www.allsaints.com/dw/image/v2/BHHD_PRD/on/demandware.static/-/Sites-allsaints-emea-master-catalog/default/dwc5812b8c/images/large/WL125X/5/WL125X-5-1.jpg?sw=1600&sh=2000&sm=fit&q=70",
+            "name": "Lorel Flying Shearling Jacket",
+            "brand": "AllSaints",
+            "color": "Black",
+            "price": "1.199",
+            "onSale": false
+        }
+    ],
+    "dresses": [
+        {
+            "id": 7,
+            "image": "https://www.allsaints.com/dw/image/v2/BHHD_PRD/on/demandware.static/-/Sites-allsaints-emea-master-catalog/default/dwccfce4a8/images/large/WD055V/2426/WD055V-2426-1.jpg?sw=1600&sh=2000&sm=fit&q=70",
+            "name": "Hadley Dress",
+            "brand": "AllSaints",
+            "color": "Forest Green",
+            "price": "159",
+            "onSale": false
+        },
+        {
+            "id": 8,
+            "image": "https://www.allsaints.com/dw/image/v2/BHHD_PRD/on/demandware.static/-/Sites-allsaints-emea-master-catalog/default/dw8e9eb69c/images/large/WD340V/7133/WD340V-7133-1.jpg?sw=1600&sh=2000&sm=fit&q=70",
+            "name": "Perri Tulle Mini Dress",
+            "brand": "AllSaints",
+            "color": "Metallic Black",
+            "price": "225",
+            "onSale": false
+        },
+        {
+            "id": 9,
+            "image": "https://www.allsaints.com/dw/image/v2/BHHD_PRD/on/demandware.static/-/Sites-allsaints-emea-master-catalog/default/dw7ce129ad/images/large/WD211X/2426/WD211X-2426-1.jpg?sw=1600&sh=2000&sm=fit&q=70",
+            "name": "Auden Lilly Mini Dress",
+            "brand": "AllSaints",
+            "color": "Forest Green",
+            "price": "239",
+            "onSale": false
+        },
+        {
+            "id": 10,
+            "image": "https://www.allsaints.com/dw/image/v2/BHHD_PRD/on/demandware.static/-/Sites-allsaints-emea-master-catalog/default/dwf3ca3406/images/large/WD291X/5/WD291X-5-1.jpg?sw=1600&sh=2000&sm=fit&q=70",
+            "name": "Melody Silk Blend Nancy Midi Dress",
+            "brand": "AllSaints",
+            "color": "Black",
+            "price": "239",
+            "onSale": false
+        },
+        {
+            "id": 11,
+            "image": "https://www.allsaints.com/dw/image/v2/BHHD_PRD/on/demandware.static/-/Sites-allsaints-emea-master-catalog/default/dw643f6766/images/large/WD055V/6975/WD055V-6975-1.jpg?sw=1600&sh=2000&sm=fit&q=70",
+            "name": "Hadley Midi Dress",
+            "brand": "AllSaints",
+            "color": "Arctic White",
+            "price": "159",
+            "onSale": false
+        },
+        {
+            "id": 12,
+            "image": "https://www.allsaints.com/dw/image/v2/BHHD_PRD/on/demandware.static/-/Sites-allsaints-emea-master-catalog/default/dw05ea7320/images/large/WD342V/5/WD342V-5-1.jpg?sw=1600&sh=2000&sm=fit&q=70",
+            "name": "Delta Velvet Dress",
+            "brand": "AllSaints",
+            "color": "Black",
+            "price": "175",
+            "onSale": false
+        }
+    ]
+}

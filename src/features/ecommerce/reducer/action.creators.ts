@@ -1,4 +1,4 @@
-import { CharacterType } from './../models/character';
+import { CharacterType } from '../models/jackets';
 import { createAction } from '@reduxjs/toolkit';
 import { actionTypes } from './action.types';
 

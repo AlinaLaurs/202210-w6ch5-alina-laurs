@@ -1,5 +1,5 @@
 import { AnyAction, Dispatch } from 'redux';
-import { CharacterType } from '../../models/character';
+import { CharacterType } from '../../models/jackets';
 import { setStore } from '../service/storage';
 import * as ac from '../../reducer/action.creators';
 
