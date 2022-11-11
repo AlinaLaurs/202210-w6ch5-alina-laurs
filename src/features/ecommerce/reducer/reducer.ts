@@ -1,7 +1,7 @@
 import { CharactersData } from '../data/data';
 import { CharacterType } from '../models/jackets';
 import { createReducer } from '@reduxjs/toolkit';
-import * as ac from './action.creators';
+import * as ac from './actionCreatorsDresses';
 
 const initialState: CharacterType[] = CharactersData;
 

@@ -1,7 +1,7 @@
 import { AnyAction, Dispatch } from 'redux';
 import { CharacterType } from '../../models/jackets';
 import { setStore } from '../service/storage';
-import * as ac from '../../reducer/action.creators';
+import * as ac from '../../reducer/actionCreatorsDresses';
 
 export function ListItem({
     item,

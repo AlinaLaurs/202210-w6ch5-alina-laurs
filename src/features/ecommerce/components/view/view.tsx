@@ -1,7 +1,7 @@
 import { SyntheticEvent, useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { rootState } from '../../../../infrastructure/store/store';
-import * as ac from '../../reducer/action.creators';
+import * as ac from '../../reducer/actionCreatorsDresses';
 import { CharactersData } from '../../data/data';
 import { List } from '../list/list';
 import { getStore, setStore } from '../service/storage';
