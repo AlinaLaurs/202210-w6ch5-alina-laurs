@@ -2,9 +2,9 @@ import { JacketsType } from '../models/jackets';
 import { createReducer } from '@reduxjs/toolkit';
 import * as ac from './actionCreatorsJackets';
 
-const initialState: JacketsType[] = [];
+const initialState: Array<JacketsType> = [];
 
-export const CharacterReducer = createReducer(initialState, (builder) => {
+export const JacketsReducer = createReducer(initialState, (builder) => {
     builder.addCase(ac.loadActionCreator, (_state, action) => action.payload);
     builder.addCase(ac.addActionCreator, (state, action) => [
         ...state,
@@ -12,11 +12,11 @@ export const CharacterReducer = createReducer(initialState, (builder) => {
     ]);
     builder.addCase(ac.updateActionCreator, (state, action) =>
         state.map((item) =>
-            item.name === action.payload.name ? action.payload : item
+            item.id === action.payload.id ? action.payload : item
         )
     );
     builder.addCase(ac.deleteActionCreator, (state, action) =>
-        state.filter((item) => item.name !== action.payload.name)
+        state.filter((item) => item.id !== action.payload.id)
     );
     builder.addDefaultCase((state) => state);
 });
