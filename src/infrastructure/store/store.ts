@@ -1,9 +1,11 @@
 import { configureStore } from '@reduxjs/toolkit';
-import { CharacterReducer } from '../../features/ecommerce/reducerJackets/reducerJackets';
+import { JacketsReducer } from '../../features/ecommerce/reducerJackets/reducerJackets';
+import { DressesReducer } from '../../features/ecommerce/reducerDresses/reducerDresses';
 
 export const appStore = configureStore({
     reducer: {
-        characters: CharacterReducer,
+        jackets: JacketsReducer,
+        dresses: DressesReducer,
     },
 });
 
