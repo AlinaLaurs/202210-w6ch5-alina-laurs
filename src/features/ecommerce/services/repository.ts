@@ -1,7 +1,7 @@
-export interface Repository<C> {
-    getAll: () => Promise<Array<C>>;
-    get?: (id: number) => Promise<C>;
-    create: (item: Partial<C>) => Promise<C>;
-    update: (item: Partial<C>) => Promise<C>;
+export interface Repository<J> {
+    getAll: () => Promise<Array<J>>;
+    get?: (id: number) => Promise<J>;
+    create: (item: Partial<J>) => Promise<J>;
+    update: (item: Partial<J>) => Promise<J>;
     delete: (id: number) => Promise<void>;
 }
