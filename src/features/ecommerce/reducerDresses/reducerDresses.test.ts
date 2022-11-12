@@ -94,7 +94,7 @@ describe('Given the function DressesReducer', () => {
             };
             state = [dressMock];
         });
-        test('Then the returned state should should be the original state', () => {
+        test('Then the returned state should be the original state', () => {
             const result = DressesReducer(state, action);
             expect(result).toEqual(state);
         });

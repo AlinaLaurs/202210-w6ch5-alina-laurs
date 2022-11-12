@@ -94,7 +94,7 @@ describe('Given the function JacketsReducer', () => {
             };
             state = [jacketMock];
         });
-        test('Then the returned state should should be the original state', () => {
+        test('Then the returned state should be the original state', () => {
             const result = JacketsReducer(state, action);
             expect(result).toEqual(state);
         });
