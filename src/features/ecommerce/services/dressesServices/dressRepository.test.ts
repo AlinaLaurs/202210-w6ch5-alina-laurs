@@ -1,7 +1,7 @@
-import { JacketRepository } from './jacketRepository';
+import { DressRepository } from './dressRepository';
 
-const mockJacket = {
-    id: 40,
+const mockDress = {
+    id: 30,
     image: 'https://www.allsaints.com/dw/image/v2/BHHD_PRD/on/demandware.static/-/Sites-allsaints-emea-master-catalog/default/dwf1097f95/images/large/WD267X/79/WD267X-79-1.jpg?sw=2400&sh=3000&sm=fit&q=70',
     name: 'Dazzle Oversized Jumper Dress',
     brand: 'AllSaints',
@@ -10,12 +10,13 @@ const mockJacket = {
     onSale: false,
 };
 
-describe('Given JacketRepository Service', () => {
+describe('Given DressRepository Service', () => {
     describe('When we instantiate it', () => {
-        let service: JacketRepository;
+        let service: DressRepository;
         beforeEach(() => {
-            service = new JacketRepository();
+            service = new DressRepository();
         });
+
         test('Then if i use service.error(), it should return an error', () => {
             const error = service.createError(
                 new Response('Error', {
@@ -28,21 +29,21 @@ describe('Given JacketRepository Service', () => {
             expect(error).toEqual(result);
         });
 
-        //get
-        test(`Then if I use service.getFountainpensType()
-            it should return a Promise of an Array of FountainpensType`, async () => {
+        // get
+        test(`Then if I use service.getDress() 
+            it should return a Promise of an Array of Dresses`, async () => {
             global.fetch = jest.fn().mockResolvedValue({
                 ok: true,
                 json: jest.fn().mockResolvedValue([]),
             });
-            const result = await service.getJackets();
+            const result = await service.getDresses();
             expect(fetch).toHaveBeenCalled();
             expect(result).toEqual([]);
         });
 
         // getAll
-        test(`Then if I use service.getFountainpensType()
-            it should not return a Promise of an Array of FountainpensType`, async () => {
+        test(`Then if I use service.getAllDress() 
+            it should not return a Promise of an Array of Dresses`, async () => {
             global.fetch = jest.fn().mockResolvedValue({
                 ok: true,
                 json: jest.fn().mockResolvedValue([]),
@@ -51,8 +52,8 @@ describe('Given JacketRepository Service', () => {
             expect(fetch).toHaveBeenCalled();
             expect(result).toEqual([]);
         });
-        test(`Then if I use service.getFountainpensType()
-            it should not return a Promise of an Array of Jackets`, async () => {
+        test(`Then if I use service.getAllDress() 
+            it should return a Promise of an Array of Dresses`, async () => {
             global.fetch = jest.fn().mockResolvedValue({
                 ok: false,
                 status: 400,
@@ -65,61 +66,65 @@ describe('Given JacketRepository Service', () => {
         });
 
         // create / post
-        test(`Then if I use service.createFountainpensType()
-                it should return a Promise of the crated fountainpen`, async () => {
+        test(`Then if I use service.createDress()
+                it should return a Promise of the created dress`, async () => {
             global.fetch = jest.fn().mockResolvedValue({
                 ok: true,
-                json: jest.fn().mockResolvedValue(mockJacket),
+                json: jest.fn().mockResolvedValue(mockDress),
             });
-            const result = await service.create(mockJacket);
+            const result = await service.create(mockDress);
             expect(fetch).toHaveBeenCalled();
-            expect(result).toEqual(mockJacket);
+            expect(result).toEqual(mockDress);
         });
-        test(`Then if I use service.createFountainpensType()
-                it should return a Promise of the created fountainpen`, async () => {
-            const partialMock = {
-                name: 'paco',
-            };
+        test(`Then if I use service.createDress()
+                it should not return a Promise of the created dress`, async () => {
             global.fetch = jest.fn().mockResolvedValue({
                 ok: false,
                 status: 400,
                 statusText: 'error',
             });
-            const expectedResult = await service.create(partialMock);
+            const expectedResult = await service.getAll();
             const result = new Error('Error 400: error');
             result.name = 'HTTPError';
             expect(expectedResult).toBe(result.toString());
         });
 
         // delete
-        test(`Then if I use service.deleteFountainpensType()
-                it should return a Promise of the deleted fountainpen`, async () => {
-            global.fetch = jest.fn().mockResolvedValue({
-                ok: true,
-                mockJacket,
-            });
-            const result = await service.delete(mockJacket.id);
+        test(`Then if I use service.deleteDress()
+                it should not return a Promise of the created dress`, async () => {
+            global.fetch = jest.fn().mockResolvedValue(mockDress);
+            const result = await service.delete(mockDress.id);
             expect(fetch).toHaveBeenCalled();
             expect(result).toBeUndefined();
         });
-        test(`Then if I use service.deleteFountainpensType()
-                it should return a Promise of the delete fountainpen`, async () => {
+        test(`Then if I use service.deleteDress()
+                it should return a Promise of the created dress`, async () => {
             global.fetch = jest.fn().mockResolvedValue({
                 ok: false,
                 status: 400,
-                statusText: 'error',
+                statusText: 'Error',
             });
-            const expectedResult = await service.delete(mockJacket.id);
+            const expectedResult = await service.delete(mockDress.id);
             const result = new Error('Error 400: error');
             result.name = 'HTTPError';
             expect(expectedResult).toBe(result.toString());
         });
 
-        // update
-        test(`Then if I use service.updateFountainpensType(), if something goes wrong, then
-            it should return an error of FountainpensType`, async () => {
+        // uptate / patch
+        test(`Then if I use service.updateDress()
+                it should return a Promise of the created dress`, async () => {
+            global.fetch = jest.fn().mockResolvedValue({
+                ok: true,
+                json: jest.fn().mockResolvedValue(mockDress),
+            });
+            const result = await service.update(mockDress);
+            expect(fetch).toHaveBeenCalled();
+            expect(result).toEqual(mockDress);
+        });
+        test(`Then if I use service.updateDress()
+                it should not return a Promise of the created dress`, async () => {
             const partialMock = {
-                name: 'paco',
+                name: 'Curro',
             };
             global.fetch = jest.fn().mockResolvedValue({
                 ok: false,
@@ -130,16 +135,6 @@ describe('Given JacketRepository Service', () => {
             const result = new Error('Error 400: error');
             result.name = 'HTTPError';
             expect(expectedResult).toBe(result.toString());
-        });
-        test(`Then if I use service.updateFountainpensType()
-                it should return a Promise of the updated fountainpen`, async () => {
-            global.fetch = jest.fn().mockResolvedValue({
-                ok: true,
-                json: jest.fn().mockResolvedValue(mockJacket),
-            });
-            const result = await service.update(mockJacket);
-            expect(fetch).toHaveBeenCalled();
-            expect(result).toEqual(mockJacket);
         });
     });
 });
