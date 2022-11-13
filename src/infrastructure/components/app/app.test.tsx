@@ -1,5 +1,7 @@
-/* import { render, screen } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
+import { Provider } from 'react-redux';
 import { MemoryRouter as Router } from 'react-router-dom';
+import { appStore } from '../../store/store';
 import { App } from './app';
 
 describe('Given App component', () => {
@@ -7,15 +9,15 @@ describe('Given App component', () => {
         beforeEach(() => {
             render(
                 <Router>
-                    <App />
+                    <Provider store={appStore}>
+                        <App />
+                    </Provider>
                 </Router>
             );
         });
         test('Then it should display the title', () => {
-            const title = /Home/i;
-            const element = screen.getByText(title);
+            const element = screen.getByText(/Alina/i);
             expect(element).toBeInTheDocument();
         });
     });
 });
-*/

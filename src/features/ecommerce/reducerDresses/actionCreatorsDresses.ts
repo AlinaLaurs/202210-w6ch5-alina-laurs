@@ -14,6 +14,6 @@ export const updateActionCreator = createAction<DressesType>(
     actionTypesDresses.update
 );
 
-export const deleteActionCreator = createAction<DressesType>(
+export const deleteActionCreator = createAction<DressesType['id']>(
     actionTypesDresses.delete
 );
