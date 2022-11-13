@@ -1,7 +1,7 @@
-import { JacketRepository } from './jacketRepository';
+import { DressRepository } from './dressRepository';
 
-const mockJacket = {
-    id: 40,
+const mockDress = {
+    id: 30,
     image: 'https://www.allsaints.com/dw/image/v2/BHHD_PRD/on/demandware.static/-/Sites-allsaints-emea-master-catalog/default/dwf1097f95/images/large/WD267X/79/WD267X-79-1.jpg?sw=2400&sh=3000&sm=fit&q=70',
     name: 'Dazzle Oversized Jumper Dress',
     brand: 'AllSaints',
@@ -10,11 +10,11 @@ const mockJacket = {
     onSale: false,
 };
 
-describe('Given JacketRepository Service', () => {
+describe('Given DressRepository Service', () => {
     describe('When we instantiate it', () => {
-        let service: JacketRepository;
+        let service: DressRepository;
         beforeEach(() => {
-            service = new JacketRepository(); // Llama al constructor, construye el repositorio.
+            service = new DressRepository(); // Llama al constructor, construye el repositorio.
         });
 
         test('Then if I use service.error(), it should return an error', () => {
@@ -32,20 +32,20 @@ describe('Given JacketRepository Service', () => {
         });
 
         // get
-        test(`Then if I use service.getJackets() 
-            it should return a Promise of an Array of Jackets`, async () => {
+        test(`Then if I use service.getDresses() 
+            it should return a Promise of an Array of Dresses`, async () => {
             global.fetch = jest.fn().mockResolvedValue({
                 ok: true,
                 json: jest.fn().mockResolvedValue([]),
             });
-            const result = await service.getJackets();
+            const result = await service.getDresses();
             expect(fetch).toHaveBeenCalled();
             expect(result).toEqual([]);
         });
 
         // getAll
         test(`Then if I use service.getAll() 
-            it should return a Promise of an Array of Jackets`, async () => {
+            it should return a Promise of an Array of Dresses`, async () => {
             global.fetch = jest.fn().mockResolvedValue({
                 ok: true,
                 json: jest.fn().mockResolvedValue([]),
@@ -55,7 +55,7 @@ describe('Given JacketRepository Service', () => {
             expect(result).toEqual([]);
         });
         test(`Then if I use service.getAll() 
-            it should not return a Promise of an Array of Jackets`, async () => {
+            it should not return a Promise of an Array of Dresses`, async () => {
             global.fetch = jest.fn().mockResolvedValue({
                 ok: false,
                 status: 400,
@@ -69,17 +69,17 @@ describe('Given JacketRepository Service', () => {
 
         // create / post
         test(`Then if I use service.create()
-                it should return a Promise of the created Jacket`, async () => {
+                it should return a Promise of the created Dress`, async () => {
             global.fetch = jest.fn().mockResolvedValue({
                 ok: true,
-                json: jest.fn().mockResolvedValue(mockJacket),
+                json: jest.fn().mockResolvedValue(mockDress),
             });
-            const result = await service.create(mockJacket);
+            const result = await service.create(mockDress);
             expect(fetch).toHaveBeenCalled();
-            expect(result).toEqual(mockJacket);
+            expect(result).toEqual(mockDress);
         });
         test(`Then if I use service.create()
-                it should not return a Promise of the created Jacket`, async () => {
+                it should not return a Promise of the created Dress`, async () => {
             const partialMock = {
                 name: 'Curro',
             };
@@ -96,23 +96,23 @@ describe('Given JacketRepository Service', () => {
 
         // delete
         test(`Then if I use service.delete()
-                it should return a Promise of the deleted Jacket`, async () => {
+                it should return a Promise of the deleted Dress`, async () => {
             global.fetch = jest.fn().mockResolvedValue({
                 ok: true,
-                mockJacket,
+                mockDress,
             });
-            const result = await service.delete(mockJacket.id);
+            const result = await service.delete(mockDress.id);
             expect(fetch).toHaveBeenCalled();
             expect(result).toBeUndefined();
         });
         test(`Then if I use service.delete()
-                it should not return a Promise of the deleted Jacket`, async () => {
+                it should not return a Promise of the deleted Dress`, async () => {
             global.fetch = jest.fn().mockResolvedValue({
                 ok: false,
                 status: 400,
                 statusText: 'error',
             });
-            const expectedResult = await service.delete(mockJacket.id);
+            const expectedResult = await service.delete(mockDress.id);
             const result = new Error('Error 400: error');
             result.name = 'HTTPError';
             expect(expectedResult).toBe(result.toString());
@@ -120,17 +120,17 @@ describe('Given JacketRepository Service', () => {
 
         // update / patch
         test(`Then if I use service.update()
-                it should return a Promise of the updated Jacket`, async () => {
+                it should return a Promise of the updated Dress`, async () => {
             global.fetch = jest.fn().mockResolvedValue({
                 ok: true,
-                json: jest.fn().mockResolvedValue(mockJacket),
+                json: jest.fn().mockResolvedValue(mockDress),
             });
-            const result = await service.update(mockJacket);
+            const result = await service.update(mockDress);
             expect(fetch).toHaveBeenCalled();
-            expect(result).toEqual(mockJacket);
+            expect(result).toEqual(mockDress);
         });
         test(`Then if I use service.update()
-                it should not return a Promise of the updated Jacket`, async () => {
+                it should not return a Promise of the updated Dress`, async () => {
             const partialMock = {
                 name: 'Pepe',
             };
