@@ -1,4 +1,4 @@
-/* import { act, render, screen } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
 import { MemoryRouter as Router } from 'react-router-dom';
 import { App } from './app';
 
@@ -17,21 +17,17 @@ Object.defineProperty(global.self, 'crypto', {
 
 describe('Given App component', () => {
     describe('When we render the component', () => {
-        beforeEach(async () => {
-            // eslint-disable-next-line testing-library/no-unnecessary-act
-            await act(async () => {
-                render(
-                    <Router>
-                        < />
-                    </Router>
-                );
-            });
+        beforeEach(() => {
+            render(
+                <Router>
+                    <App />
+                </Router>
+            );
         });
         test('Then it should display the title', () => {
-            const title = new RegExp('App', 'i');
+            const title = new RegExp('React', 'i');
             const element = screen.getByText(title);
             expect(element).toBeInTheDocument();
         });
     });
 });
-*/
