@@ -82,7 +82,7 @@ describe('Given the function DressesReducer', () => {
         });
         test('Then the returned state should not include the action payload', () => {
             const result = DressesReducer(state, action);
-            expect(result).toEqual([]);
+            expect(result).toEqual([dressMock]);
         });
     });
 

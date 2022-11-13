@@ -1,17 +1,17 @@
 import { render, screen } from '@testing-library/react';
 import { MemoryRouter as Router } from 'react-router-dom';
-import { AppRoutes } from './app.routes';
+import Sales from './salesPage';
 
-describe('Given AppRoutes component', () => {
-    describe('When we render the component and the route is home', () => {
+describe('Given SalesPage component', () => {
+    describe('When we render the component', () => {
         beforeEach(() => {
             render(
-                <Router initialEntries={['/', '/home']} initialIndex={0}>
-                    <AppRoutes />
+                <Router>
+                    <Sales />
                 </Router>
             );
         });
-        test('Then it should display the SalesPage', () => {
+        test('Then it should display the title', () => {
             const element = screen.getByText(/Sales/i);
             expect(element).toBeInTheDocument();
         });
