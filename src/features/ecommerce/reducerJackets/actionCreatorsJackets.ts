@@ -14,6 +14,6 @@ export const updateActionCreator = createAction<JacketsType>(
     actionTypesJackets.update
 );
 
-export const deleteActionCreator = createAction<JacketsType>(
+export const deleteActionCreator = createAction<JacketsType['id']>(
     actionTypesJackets.delete
 );
