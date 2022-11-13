@@ -1,5 +1,7 @@
 import { render, screen } from '@testing-library/react';
+import { Provider } from 'react-redux';
 import { MemoryRouter as Router } from 'react-router-dom';
+import { appStore } from '../../../../infrastructure/store/store';
 import Dresses from './dressesPage';
 
 describe('Given DressesPage component', () => {
@@ -7,7 +9,9 @@ describe('Given DressesPage component', () => {
         beforeEach(() => {
             render(
                 <Router>
-                    <Dresses />
+                    <Provider store={appStore}>
+                        <Dresses />
+                    </Provider>
                 </Router>
             );
         });
