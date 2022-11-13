@@ -5,7 +5,7 @@ function JacketsPage() {
     const { jackets } = useJackets();
     return (
         <main>
-            <h2>Dresses page</h2>
+            <h2>Jackets page</h2>
             <JacketList item={jackets} />
         </main>
     );
